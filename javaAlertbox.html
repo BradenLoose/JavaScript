@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<p>Click the button to go to the next page:</p>
+
+<button onclick="number1()">Press me to see more</button>
+
+
+
+<p>Click the button to display more information on this page</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="test"></p>
+
+
+
+<p>Click the button to see the Timed text</p>
+
+<button onclick="timedText()">Display timed text</button>
+<input type="text" id="txt">
+
+<p>click the button and wait ten seconds</p>
+
+<button onclick="myFunction3()">Try it</button>
+
+<p>Click the button to display a random number between 1 and 100.</p>
+
+<button onclick="myFunction4()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction4() {
+    var x = Math.floor((Math.random() * 100) + 1);
+     document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+<script>
+var myVar;
+
+function myFunction3() {
+    myVar = setTimeout(function(){ alert("BOO!!!") }, 10000);
+}
+</script>
+
+<script>
+function timedText() {
+    var x = document.getElementById("txt");
+    setTimeout(function(){ x.value="2 seconds" }, 2000);
+    setTimeout(function(){ x.value="4 seconds" }, 4000);
+    setTimeout(function(){ x.value="6 seconds" }, 6000);
+    setTimeout(function(){ x.value="8 seconds" }, 8000);
+    setTimeout(function(){ x.value="10 seconds" }, 10000);
+}
+</script>
+
+  <script>
+    function myFunction() {
+      var x;
+      if (confirm("press a button!") == true) {
+        x = "you pressed OK!, now you are going to see more stuff!!!!";
+      } else {
+        x = "why did you press cancel, you hurt my feelings.";
+      }
+      document.getElementById("test").innerHTML = x;
+    }
+  </script>
+  <script>
+    function number1() {
+      alert("why did you click that button you are foolish!!!");
+    }
+  </script>
+  </body>
+</html>

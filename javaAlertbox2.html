@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<p>Click the button to display more information on this page</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="test"></p>
+
+<script>
+  function myFunction() {
+    var x;
+    if (confirm("press a button!") == true) {
+      x = "you pressed OK!, now you are going to see more stuff!!!!";
+    } else {
+      x = "why did you press cancel, you hurt my feelings.";
+    }
+    document.getElementById("test").innerHTML = x;
+  }
+</script>
+
+
+
+  </body>
+</html>
